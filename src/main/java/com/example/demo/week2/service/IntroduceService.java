@@ -13,7 +13,7 @@ public class IntroduceService {
      * @return name 自分の名前
      */
 	public String getName() {
-		String name = "Shimizu";
+		String name = "Hayato";
 		return name;
 	}
 	
