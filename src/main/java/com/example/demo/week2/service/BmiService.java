@@ -23,6 +23,7 @@ public class BmiService {
         // BMI計算
     	
     	double result =  weight / ( height * height);
+    	
     	return result;
     }
 
