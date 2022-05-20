@@ -17,10 +17,12 @@ public class OmikujiService {
      *
      * @return result おみくじの結果
      */
-    public String getResult() {
-    	String 
-return getResult;
-    }
+    	public String getResult() {
+    	String[] str = {"大吉", "中吉", "末吉","凶"};
+    	 int num =  (int) (Math.random() * (str.length));
+    	 String result = str[num];
+    	 return result;
+        }
 
 	/**
 	 * <pre>
@@ -36,7 +38,17 @@ return getResult;
 	 * @return resultComment おみくじ結果に対してのコメント
 	 */
 	public String getResultComment(String result) {
-
+		String resultComment ="";
+		if( result.equals("大吉")) {
+			resultComment ="大吉です";
+		}else if(result.equals("中吉")) {
+			resultComment ="中吉です";
+		}else if(result.equals("末吉")) {
+			resultComment ="末吉です";
+		}else {
+			resultComment ="凶です";
+		}
+		return resultComment;
 		// おみくじの結果に紐づいた、コメントを定数として定義
 
 	}
